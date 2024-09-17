@@ -1,11 +1,10 @@
 package com.fpt.quickhire.model;
 
 import com.fpt.quickhire.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.fpt.quickhire.model.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
-public interface UserService extends JpaRepository<User, Long> {
-
-    User findById(long id);
-
+public interface UserService {
+    User findUserById(long id) ;
 }
